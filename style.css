@@ -1,0 +1,274 @@
+
+/* ---------- General Styles ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #263238;
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* ---------- Header ---------- */
+
+.header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.header h1 {
+    font-size: 32px;
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+/* ---------- Add Habit Form ---------- */
+
+.add-habit {
+    margin-bottom: 25px;
+}
+
+#habitForm {
+    display: flex;
+    gap: 10px;
+}
+
+#habitInput {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    background: white;
+}
+
+#habitInput:focus {
+    border-color: #2563eb;
+}
+
+#addButton {
+    padding: 14px 20px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+#addButton:hover {
+    background-color: #1d4ed8;
+}
+
+/* ---------- Statistics ---------- */
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.stat-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card h2 {
+    font-size: 28px;
+    color: #2563eb;
+    margin-bottom: 6px;
+}
+
+.stat-card p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* ---------- Habit Section ---------- */
+
+.habit-section h2 {
+    font-size: 21px;
+    margin-bottom: 18px;
+}
+
+.habit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Individual Habit Card */
+
+.habit-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px;
+    background: white;
+    border-radius: 10px;
+    border-left: 5px solid #cbd5e1;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    transition: 0.2s;
+}
+
+.habit-card.completed {
+    border-left-color: #16a34a;
+    background-color: #f0fdf4;
+}
+
+.habit-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.habit-info h3 {
+    font-size: 16px;
+    margin-bottom: 7px;
+    overflow-wrap: anywhere;
+}
+
+.habit-info p {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.habit-card.completed .habit-info h3 {
+    color: #15803d;
+}
+
+/* ---------- Habit Actions ---------- */
+
+.habit-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.complete-button {
+    padding: 9px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #e2e8f0;
+    color: #334155;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.complete-button:hover {
+    background: #cbd5e1;
+}
+
+.completed .complete-button {
+    background: #16a34a;
+    color: white;
+}
+
+.completed .complete-button:hover {
+    background: #15803d;
+}
+
+.delete-button {
+    padding: 9px 11px;
+    border: none;
+    border-radius: 6px;
+    background: #fee2e2;
+    color: #dc2626;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.delete-button:hover {
+    background: #fecaca;
+}
+
+/* ---------- Empty Message ---------- */
+
+.empty-message {
+    text-align: center;
+    color: #94a3b8;
+    padding: 30px 10px;
+    font-size: 14px;
+}
+
+.empty-message.hidden {
+    display: none;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* ---------- Responsive Design ---------- */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 25px 12px;
+    }
+
+    .header h1 {
+        font-size: 27px;
+    }
+
+    #habitForm {
+        flex-direction: column;
+    }
+
+    #addButton {
+        width: 100%;
+    }
+
+    .habit-card {
+        padding: 14px 10px;
+    }
+
+    .habit-actions {
+        gap: 5px;
+    }
+
+    .complete-button,
+    .delete-button {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .habit-info h3 {
+        font-size: 14px;
+    }
+
+    .stat-card {
+        padding: 18px 10px;
+    }
+}

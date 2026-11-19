@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+
+    <!-- Link CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <h1>Habit Tracker</h1>
+            <p>Build better habits, one day at a time.</p>
+        </header>
+
+        <!-- Add Habit Section -->
+        <section class="add-habit">
+            <form id="habitForm">
+                <input
+                    type="text"
+                    id="habitInput"
+                    placeholder="Enter a new habit..."
+                    autocomplete="off"
+                    maxlength="60"
+                >
+                <button type="submit" id="addButton">
+                    + Add Habit
+                </button>
+            </form>
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats">
+            <div class="stat-card">
+                <h2 id="totalHabits">0</h2>
+                <p>Total Habits</p>
+            </div>
+
+            <div class="stat-card">
+                <h2 id="completedHabits">0</h2>
+                <p>Completed Today</p>
+            </div>
+        </section>
+
+        <!-- Habit List -->
+        <section class="habit-section">
+            <h2>My Habits</h2>
+
+            <div id="habitList" class="habit-list">
+                <!-- Habits will be displayed here -->
+            </div>
+
+            <p id="emptyMessage" class="empty-message">
+                No habits yet. Add your first habit to get started!
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Stay consistent. Small steps lead to big changes.</p>
+        </footer>
+
+    </div>
+
+    <!-- Link JavaScript file -->
+    <script src="java.js"></script>
+</body>
+</html>
